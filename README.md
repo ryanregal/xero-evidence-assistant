@@ -2,6 +2,10 @@
 
 A small JavaScript web app that gathers a focused set of public Xero Australia pages, stores useful evidence locally, retrieves relevant chunks for each question, and uses a real local model to answer only from that evidence.
 
+## Demo video
+
+[Watch the demo video on Google Drive](https://drive.google.com/file/d/1AjBLK_EREh7CBu6a0yvt0NLiz4wIuvxa/view?usp=drive_link)
+
 ## Setup and usage
 
 Requirements: Node.js 20+ and [Ollama](https://ollama.com/) for live question answering. The app has no third-party npm dependencies and needs no API key or account.
