@@ -1,0 +1,750 @@
+{
+  "runDate": "2026-09-19T06:31:26.754Z",
+  "model": "ollama:llama3.2:3b",
+  "configuration": {
+    "provider": "Ollama local runtime",
+    "temperature": 0,
+    "modelTimeoutMs": 120000,
+    "maxOutputTokens": 512,
+    "contextWindowTokens": 4096,
+    "retrievalTopK": 4,
+    "retrieval": "lexical scoring with per-source diversity"
+  },
+  "sourceRetrievalDates": [
+    {
+      "id": "about",
+      "title": "About Xero | Xero AU",
+      "url": "https://www.xero.com/au/about/",
+      "retrievedAt": "2026-09-19T06:31:11.230Z",
+      "lastAttemptStatus": "success",
+      "lastAttemptAt": "2026-09-19T06:31:11.230Z"
+    },
+    {
+      "id": "small-business",
+      "title": "Why Choose Xero for Your Small Business | Xero AU",
+      "url": "https://www.xero.com/au/small-businesses/",
+      "retrievedAt": "2026-09-19T06:31:11.862Z",
+      "lastAttemptStatus": "success",
+      "lastAttemptAt": "2026-09-19T06:31:11.862Z"
+    },
+    {
+      "id": "features",
+      "title": "All Xero Features | Xero AU",
+      "url": "https://www.xero.com/au/accounting-software/all-features/",
+      "retrievedAt": "2026-09-19T06:31:12.231Z",
+      "lastAttemptStatus": "success",
+      "lastAttemptAt": "2026-09-19T06:31:12.231Z"
+    },
+    {
+      "id": "pricing",
+      "title": "Recommendation | Xero AU",
+      "url": "https://www.xero.com/au/pricing-plans/recommendation/",
+      "retrievedAt": "2026-09-19T06:31:12.530Z",
+      "lastAttemptStatus": "success",
+      "lastAttemptAt": "2026-09-19T06:31:12.530Z"
+    }
+  ],
+  "initialGather": [
+    {
+      "sourceId": "about",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:11.230Z",
+      "chunks": 2,
+      "contentChanged": false
+    },
+    {
+      "sourceId": "small-business",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:11.862Z",
+      "chunks": 6,
+      "contentChanged": false
+    },
+    {
+      "sourceId": "features",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:12.231Z",
+      "chunks": 7,
+      "contentChanged": false
+    },
+    {
+      "sourceId": "pricing",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:12.530Z",
+      "chunks": 3,
+      "contentChanged": false
+    }
+  ],
+  "cases": [
+    {
+      "name": "supported",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "expectedBehaviour": "Return supported feature facts with evidence citations and no unsupported additions.",
+      "relevantEvidence": [
+        {
+          "id": "features-c0",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 16.485,
+          "excerpt": "From streamlined bank connections to intuitive online invoicing, Xero's features empower you to prioritize business growth.\nJax Make smarter decisions and supercharge your admin with JAX (in beta).\nAccept payments Accept payments via credit card, debit card, or direct debit. Boost on-time payments and save time chasing payments.\nOnline invoicing..."
+        },
+        {
+          "id": "features-c1",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 15.766,
+          "excerpt": "Track projects Use Xero’s job tracking tools for project planning, budgeting, quoting and invoicing. Record time and track costs.\nPayroll Keep basic pay records online, complete pay runs for a small number of employees using Xero, and run payroll reports.\nPurchase orders Create and send digital purchase orders with Xero's software, tracking orde..."
+        },
+        {
+          "id": "small-business-c1",
+          "sourceId": "small-business",
+          "title": "Why Choose Xero for Your Small Business | Xero AU",
+          "url": "https://www.xero.com/au/small-businesses/",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "score": 14.784,
+          "excerpt": "Automate everyday tasks, track everything in one place, and send invoices online.\nMake tax time easier, set up bank feeds, and collaborate with your accountant and bookkeeper online,\nClaim expenses, do your accounting on the go with the Xero mobile app, and collaborate with your accountant.\nSimplify payroll, track inventory, and manage your work..."
+        },
+        {
+          "id": "small-business-c0",
+          "sourceId": "small-business",
+          "title": "Why Choose Xero for Your Small Business | Xero AU",
+          "url": "https://www.xero.com/au/small-businesses/",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "score": 13.891,
+          "excerpt": "Claim expenses, set up bank feeds, and collaborate with your accountant or bookkeeper online.\nTrack inventory, set up bank feeds, and collaborate with your accountant or bookkeeper online.\nSet up bank feeds, claim expenses, and collaborate with your accountant or bookkeeper online.\nClaim expenses, send invoices, and collaborate with your account..."
+        }
+      ],
+      "actualOutput": {
+        "status": "answered",
+        "claims": [
+          {
+            "text": "Xero supports online invoicing.",
+            "evidenceIds": [
+              "features-c0",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c0",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          },
+          {
+            "text": "Xero supports bank reconciliation.",
+            "evidenceIds": [
+              "features-c0",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c0",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          },
+          {
+            "text": "Xero supports multi-currency accounting.",
+            "evidenceIds": [
+              "features-c1",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c1",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          }
+        ],
+        "unknowns": [],
+        "modelCalled": true
+      },
+      "reuseCheck": null,
+      "assessment": "Pass: 3 evidence-backed claim(s) returned."
+    },
+    {
+      "name": "multi-source",
+      "question": "Who is Xero designed for, what accounting features does it provide, and are Australian prices shown in AUD and inclusive of GST?",
+      "expectedBehaviour": "Combine customer, feature and Australian AUD/GST pricing evidence from at least two sources.",
+      "relevantEvidence": [
+        {
+          "id": "pricing-c0",
+          "sourceId": "pricing",
+          "title": "Recommendation | Xero AU",
+          "url": "https://www.xero.com/au/pricing-plans/recommendation/",
+          "retrievedAt": "2026-09-19T06:31:12.530Z",
+          "score": 14.294,
+          "excerpt": "Find the Xero plan that's right for you\n*This recommendation is only based on your responses to the questions. Please consider the plan that best suits your business needs.\nPricing plan details and offer terms\nPrices are in AUD and include GST. Xero reserves the right to change pricing at any time. Xero subscriptions auto-renew monthly until the..."
+        },
+        {
+          "id": "features-c2",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 10.515,
+          "excerpt": "GST returns Xero calculates GST and speeds up preparing business activity statements. Submit your BAS to the ATO from Xero.\nOnline file storage Use Xero for online file storage. Manage and share documents, contracts, bills and receipts safely from anywhere.\nAnalytics See future cash flow, check financial health and track metrics.\nAccounting dash..."
+        },
+        {
+          "id": "small-business-c5",
+          "sourceId": "small-business",
+          "title": "Why Choose Xero for Your Small Business | Xero AU",
+          "url": "https://www.xero.com/au/small-businesses/",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "score": 9.158,
+          "excerpt": "Included Send invoices and quotes Included Accept online invoice payments^ Included Automate bill entry and track bills Included Reconcile bank transactions Included Track GST and lodge BAS Included Smart document capture Included View real-time reports Included Automate superannuation Included Payroll for 10 people Included 180 day cashflow for..."
+        },
+        {
+          "id": "features-c5",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 6.349,
+          "excerpt": "Included Send invoices and quotes Included Accept online invoice payments^ Included Automate bill entry and track bills Included Reconcile bank transactions Included Track GST and lodge BAS Included Smart document capture Included View real-time reports Included Automate superannuation Included Payroll for 10 people Included 180 day cashflow for..."
+        }
+      ],
+      "actualOutput": {
+        "status": "answered",
+        "claims": [
+          {
+            "text": "Xero is designed for small businesses.",
+            "evidenceIds": [
+              "small-business-c5"
+            ],
+            "sources": [
+              {
+                "id": "small-business-c5",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          },
+          {
+            "text": "Xero provides accounting features such as GST returns, online file storage, analytics, accounting dashboard, manage fixed assets, Xero Accounting app, automate tasks, performance dashboards, and payroll for 10 people.",
+            "evidenceIds": [
+              "features-c2",
+              "features-c5"
+            ],
+            "sources": [
+              {
+                "id": "features-c2",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "features-c5",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              }
+            ]
+          },
+          {
+            "text": "Australian prices in Xero are shown in AUD and are inclusive of GST.",
+            "evidenceIds": [
+              "pricing-c0"
+            ],
+            "sources": [
+              {
+                "id": "pricing-c0",
+                "sourceId": "pricing",
+                "title": "Recommendation | Xero AU",
+                "url": "https://www.xero.com/au/pricing-plans/recommendation/",
+                "retrievedAt": "2026-09-19T06:31:12.530Z"
+              }
+            ]
+          }
+        ],
+        "unknowns": [],
+        "modelCalled": true
+      },
+      "reuseCheck": null,
+      "assessment": "Pass: the answer cites 3 sources."
+    },
+    {
+      "name": "insufficient-evidence",
+      "question": "What food is served in Xero's staff cafeteria on Tuesdays?",
+      "expectedBehaviour": "State that the stored research cannot establish this and do not invent an answer.",
+      "relevantEvidence": [],
+      "actualOutput": {
+        "status": "insufficient",
+        "claims": [],
+        "unknowns": [
+          "The stored research does not contain sufficiently relevant evidence for this question."
+        ],
+        "modelCalled": false
+      },
+      "reuseCheck": null,
+      "assessment": "Pass: no unsupported factual answer was returned."
+    },
+    {
+      "name": "repeated",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "expectedBehaviour": "Reuse the existing research without refetching or reprocessing unchanged sources.",
+      "relevantEvidence": [
+        {
+          "id": "features-c0",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 16.485,
+          "excerpt": "From streamlined bank connections to intuitive online invoicing, Xero's features empower you to prioritize business growth.\nJax Make smarter decisions and supercharge your admin with JAX (in beta).\nAccept payments Accept payments via credit card, debit card, or direct debit. Boost on-time payments and save time chasing payments.\nOnline invoicing..."
+        },
+        {
+          "id": "features-c1",
+          "sourceId": "features",
+          "title": "All Xero Features | Xero AU",
+          "url": "https://www.xero.com/au/accounting-software/all-features/",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "score": 15.766,
+          "excerpt": "Track projects Use Xero’s job tracking tools for project planning, budgeting, quoting and invoicing. Record time and track costs.\nPayroll Keep basic pay records online, complete pay runs for a small number of employees using Xero, and run payroll reports.\nPurchase orders Create and send digital purchase orders with Xero's software, tracking orde..."
+        },
+        {
+          "id": "small-business-c1",
+          "sourceId": "small-business",
+          "title": "Why Choose Xero for Your Small Business | Xero AU",
+          "url": "https://www.xero.com/au/small-businesses/",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "score": 14.784,
+          "excerpt": "Automate everyday tasks, track everything in one place, and send invoices online.\nMake tax time easier, set up bank feeds, and collaborate with your accountant and bookkeeper online,\nClaim expenses, do your accounting on the go with the Xero mobile app, and collaborate with your accountant.\nSimplify payroll, track inventory, and manage your work..."
+        },
+        {
+          "id": "small-business-c0",
+          "sourceId": "small-business",
+          "title": "Why Choose Xero for Your Small Business | Xero AU",
+          "url": "https://www.xero.com/au/small-businesses/",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "score": 13.891,
+          "excerpt": "Claim expenses, set up bank feeds, and collaborate with your accountant or bookkeeper online.\nTrack inventory, set up bank feeds, and collaborate with your accountant or bookkeeper online.\nSet up bank feeds, claim expenses, and collaborate with your accountant or bookkeeper online.\nClaim expenses, send invoices, and collaborate with your account..."
+        }
+      ],
+      "actualOutput": {
+        "status": "answered",
+        "claims": [
+          {
+            "text": "Xero supports online invoicing.",
+            "evidenceIds": [
+              "features-c0",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c0",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          },
+          {
+            "text": "Xero supports bank reconciliation.",
+            "evidenceIds": [
+              "features-c0",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c0",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          },
+          {
+            "text": "Xero supports multi-currency accounting.",
+            "evidenceIds": [
+              "features-c1",
+              "small-business-c0"
+            ],
+            "sources": [
+              {
+                "id": "features-c1",
+                "sourceId": "features",
+                "title": "All Xero Features | Xero AU",
+                "url": "https://www.xero.com/au/accounting-software/all-features/",
+                "retrievedAt": "2026-09-19T06:31:12.231Z"
+              },
+              {
+                "id": "small-business-c0",
+                "sourceId": "small-business",
+                "title": "Why Choose Xero for Your Small Business | Xero AU",
+                "url": "https://www.xero.com/au/small-businesses/",
+                "retrievedAt": "2026-09-19T06:31:11.862Z"
+              }
+            ]
+          }
+        ],
+        "unknowns": [],
+        "modelCalled": true
+      },
+      "reuseCheck": [
+        {
+          "sourceId": "about",
+          "action": "reused",
+          "retrievedAt": "2026-09-19T06:31:11.230Z",
+          "lastAttemptStatus": "success"
+        },
+        {
+          "sourceId": "small-business",
+          "action": "reused",
+          "retrievedAt": "2026-09-19T06:31:11.862Z",
+          "lastAttemptStatus": "success"
+        },
+        {
+          "sourceId": "features",
+          "action": "reused",
+          "retrievedAt": "2026-09-19T06:31:12.231Z",
+          "lastAttemptStatus": "success"
+        },
+        {
+          "sourceId": "pricing",
+          "action": "reused",
+          "retrievedAt": "2026-09-19T06:31:12.530Z",
+          "lastAttemptStatus": "success"
+        }
+      ],
+      "assessment": "Pass: the pre-question gather reused all unchanged sources without fetching or reprocessing."
+    }
+  ],
+  "activity": [
+    {
+      "at": "2026-09-19T06:31:11.233Z",
+      "type": "source_fetch_started",
+      "sourceId": "about",
+      "url": "https://www.xero.com/au/about/",
+      "refresh": true
+    },
+    {
+      "at": "2026-09-19T06:31:11.861Z",
+      "type": "source_reprocessed",
+      "sourceId": "about",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:11.230Z",
+      "chunks": 2,
+      "contentChanged": false
+    },
+    {
+      "at": "2026-09-19T06:31:11.863Z",
+      "type": "source_fetch_started",
+      "sourceId": "small-business",
+      "url": "https://www.xero.com/au/small-businesses/",
+      "refresh": true
+    },
+    {
+      "at": "2026-09-19T06:31:12.229Z",
+      "type": "source_reprocessed",
+      "sourceId": "small-business",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:11.862Z",
+      "chunks": 6,
+      "contentChanged": false
+    },
+    {
+      "at": "2026-09-19T06:31:12.231Z",
+      "type": "source_fetch_started",
+      "sourceId": "features",
+      "url": "https://www.xero.com/au/accounting-software/all-features/",
+      "refresh": true
+    },
+    {
+      "at": "2026-09-19T06:31:12.529Z",
+      "type": "source_reprocessed",
+      "sourceId": "features",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:12.231Z",
+      "chunks": 7,
+      "contentChanged": false
+    },
+    {
+      "at": "2026-09-19T06:31:12.531Z",
+      "type": "source_fetch_started",
+      "sourceId": "pricing",
+      "url": "https://www.xero.com/au/pricing-plans/recommendation/",
+      "refresh": true
+    },
+    {
+      "at": "2026-09-19T06:31:12.609Z",
+      "type": "source_reprocessed",
+      "sourceId": "pricing",
+      "action": "reprocessed",
+      "retrievedAt": "2026-09-19T06:31:12.530Z",
+      "chunks": 3,
+      "contentChanged": false
+    },
+    {
+      "at": "2026-09-19T06:31:12.635Z",
+      "type": "retrieval_completed",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "durationMs": 23,
+      "selectedCount": 4,
+      "sourceCount": 2,
+      "evidence": [
+        {
+          "id": "features-c0",
+          "sourceId": "features",
+          "score": 16.485
+        },
+        {
+          "id": "features-c1",
+          "sourceId": "features",
+          "score": 15.766
+        },
+        {
+          "id": "small-business-c1",
+          "sourceId": "small-business",
+          "score": 14.784
+        },
+        {
+          "id": "small-business-c0",
+          "sourceId": "small-business",
+          "score": 13.891
+        }
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:12.639Z",
+      "type": "model_call_started",
+      "provider": "ollama:llama3.2:3b",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "evidenceIds": [
+        "features-c0",
+        "features-c1",
+        "small-business-c1",
+        "small-business-c0"
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:17.241Z",
+      "type": "model_call_succeeded",
+      "provider": "ollama:llama3.2:3b",
+      "status": "answered",
+      "durationMs": 4595,
+      "evidenceCount": 4,
+      "claimCount": 3,
+      "unknownCount": 0,
+      "responseChars": 410,
+      "doneReason": "stop",
+      "promptEvalCount": 1460,
+      "evalCount": 115,
+      "totalDurationNs": 4582151400
+    },
+    {
+      "at": "2026-09-19T06:31:17.331Z",
+      "type": "retrieval_completed",
+      "question": "Who is Xero designed for, what accounting features does it provide, and are Australian prices shown in AUD and inclusive of GST?",
+      "durationMs": 56,
+      "selectedCount": 4,
+      "sourceCount": 3,
+      "evidence": [
+        {
+          "id": "pricing-c0",
+          "sourceId": "pricing",
+          "score": 14.294
+        },
+        {
+          "id": "features-c2",
+          "sourceId": "features",
+          "score": 10.515
+        },
+        {
+          "id": "small-business-c5",
+          "sourceId": "small-business",
+          "score": 9.158
+        },
+        {
+          "id": "features-c5",
+          "sourceId": "features",
+          "score": 6.349
+        }
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:17.375Z",
+      "type": "model_call_started",
+      "provider": "ollama:llama3.2:3b",
+      "question": "Who is Xero designed for, what accounting features does it provide, and are Australian prices shown in AUD and inclusive of GST?",
+      "evidenceIds": [
+        "pricing-c0",
+        "features-c2",
+        "small-business-c5",
+        "features-c5"
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:22.917Z",
+      "type": "model_call_succeeded",
+      "provider": "ollama:llama3.2:3b",
+      "status": "answered",
+      "durationMs": 5521,
+      "evidenceCount": 4,
+      "claimCount": 3,
+      "unknownCount": 0,
+      "responseChars": 585,
+      "doneReason": "stop",
+      "promptEvalCount": 1349,
+      "evalCount": 150,
+      "totalDurationNs": 5509438800
+    },
+    {
+      "at": "2026-09-19T06:31:22.921Z",
+      "type": "retrieval_completed",
+      "question": "What food is served in Xero's staff cafeteria on Tuesdays?",
+      "durationMs": 2,
+      "selectedCount": 0,
+      "sourceCount": 0,
+      "evidence": []
+    },
+    {
+      "at": "2026-09-19T06:31:22.922Z",
+      "type": "question_insufficient_before_model",
+      "question": "What food is served in Xero's staff cafeteria on Tuesdays?"
+    },
+    {
+      "at": "2026-09-19T06:31:22.925Z",
+      "type": "source_reused",
+      "sourceId": "about",
+      "action": "reused",
+      "retrievedAt": "2026-09-19T06:31:11.230Z",
+      "lastAttemptStatus": "success"
+    },
+    {
+      "at": "2026-09-19T06:31:22.927Z",
+      "type": "source_reused",
+      "sourceId": "small-business",
+      "action": "reused",
+      "retrievedAt": "2026-09-19T06:31:11.862Z",
+      "lastAttemptStatus": "success"
+    },
+    {
+      "at": "2026-09-19T06:31:22.929Z",
+      "type": "source_reused",
+      "sourceId": "features",
+      "action": "reused",
+      "retrievedAt": "2026-09-19T06:31:12.231Z",
+      "lastAttemptStatus": "success"
+    },
+    {
+      "at": "2026-09-19T06:31:22.929Z",
+      "type": "source_reused",
+      "sourceId": "pricing",
+      "action": "reused",
+      "retrievedAt": "2026-09-19T06:31:12.530Z",
+      "lastAttemptStatus": "success"
+    },
+    {
+      "at": "2026-09-19T06:31:22.935Z",
+      "type": "retrieval_completed",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "durationMs": 4,
+      "selectedCount": 4,
+      "sourceCount": 2,
+      "evidence": [
+        {
+          "id": "features-c0",
+          "sourceId": "features",
+          "score": 16.485
+        },
+        {
+          "id": "features-c1",
+          "sourceId": "features",
+          "score": 15.766
+        },
+        {
+          "id": "small-business-c1",
+          "sourceId": "small-business",
+          "score": 14.784
+        },
+        {
+          "id": "small-business-c0",
+          "sourceId": "small-business",
+          "score": 13.891
+        }
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:22.936Z",
+      "type": "model_call_started",
+      "provider": "ollama:llama3.2:3b",
+      "question": "Does Xero support online invoicing, bank reconciliation, and multi-currency accounting?",
+      "evidenceIds": [
+        "features-c0",
+        "features-c1",
+        "small-business-c1",
+        "small-business-c0"
+      ]
+    },
+    {
+      "at": "2026-09-19T06:31:26.751Z",
+      "type": "model_call_succeeded",
+      "provider": "ollama:llama3.2:3b",
+      "status": "answered",
+      "durationMs": 3814,
+      "evidenceCount": 4,
+      "claimCount": 3,
+      "unknownCount": 0,
+      "responseChars": 410,
+      "doneReason": "stop",
+      "promptEvalCount": 1460,
+      "evalCount": 115,
+      "totalDurationNs": 3812724400
+    }
+  ]
+}

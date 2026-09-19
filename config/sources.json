@@ -1,0 +1,22 @@
+[
+  {
+    "id": "about",
+    "url": "https://www.xero.com/au/about/",
+    "label": "About Xero"
+  },
+  {
+    "id": "small-business",
+    "url": "https://www.xero.com/au/small-businesses/",
+    "label": "Xero for Small Business"
+  },
+  {
+    "id": "features",
+    "url": "https://www.xero.com/au/accounting-software/all-features/",
+    "label": "Xero Accounting Features"
+  },
+  {
+    "id": "pricing",
+    "url": "https://www.xero.com/au/pricing-plans/recommendation/",
+    "label": "Xero Pricing Plan Details"
+  }
+]

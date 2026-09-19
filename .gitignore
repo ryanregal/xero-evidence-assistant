@@ -1,0 +1,5 @@
+node_modules/
+.env
+data/research.json
+data/events.jsonl
+.DS_Store

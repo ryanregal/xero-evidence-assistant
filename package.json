@@ -1,0 +1,17 @@
+{
+  "name": "xero-evidence-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Small evidence-grounded research and question-answering application for the Pretian Squared home exercise.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/*.test.js",
+    "evaluate": "node scripts/evaluate.js",
+    "evaluate:refresh": "node scripts/evaluate.js --refresh",
+    "demo:failure": "node scripts/demo-failure.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
